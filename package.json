@@ -2,7 +2,7 @@
   "name": "vite-react-styled-tailwind",
   "description": "A starter kit that integrates Vite, React and TaildwindCSS as styled components.",
   "version": "0.1.0",
-  "private": true,
+  "author": "Nestor Britez",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
