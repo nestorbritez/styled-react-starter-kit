@@ -3,6 +3,7 @@
   "description": "A starter kit that integrates Vite, React and TaildwindCSS as styled components.",
   "version": "0.1.0",
   "author": "Nestor Britez",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,7 +11,6 @@
     "lint": "eslint --fix ."
   },
   "dependencies": {
-    "@heroicons/react": "^1.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
