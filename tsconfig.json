@@ -19,9 +19,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/public/*": ["public/*"],
-      "@/mocks/*": ["mocks/*"],
+      "@/*": ["src/*"]
     }
   },
   "include": [
