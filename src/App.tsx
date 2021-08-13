@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import tw from 'tailwind-styled-components'
 
 import logo from './images/favicon.svg'
@@ -76,7 +76,7 @@ const App: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Tailwindcss Docs
+          TailwindCSS Docs
         </Link>
       </p>
     </Container>
