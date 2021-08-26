@@ -1,6 +1,6 @@
 {
   "name": "vite-react-styled-tailwind",
-  "description": "A starter kit that integrates Vite, React and TaildwindCSS as styled components.",
+  "description": "A starter kit that integrates Vite, React and Tailwind as Styled Components.",
   "version": "0.1.0",
   "author": "Nestor Britez",
   "license": "MIT",
@@ -46,5 +46,16 @@
     "vite": "^2.4.4",
     "vite-react-jsx": "^1.1.2",
     "vite-tsconfig-paths": "^3.3.13"
+  },
+  "prettier": {
+    "semi": false,
+    "endOfLine": "auto",
+    "singleQuote": true
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }

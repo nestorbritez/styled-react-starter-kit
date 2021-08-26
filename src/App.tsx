@@ -15,7 +15,7 @@ const Logo = tw.img`
 `
 
 const Button = tw.button`
-  bg-purple-500
+  bg-purple-600
   py-2 px-4
   rounded
 `
