@@ -3,7 +3,7 @@ import tw from 'tailwind-styled-components'
 
 import logo from './images/favicon.svg'
 
-const Container = tw.div`
+const Container = tw.main`
   max-w-lg h-screen
   flex flex-col items-center justify-center space-y-5
   m-auto
@@ -43,13 +43,13 @@ const App: React.FC = () => {
 
   return (
     <Container>
-      <Logo src={logo} alt="logo" />
-      <p>Hello Vite React App with Styled Taildwind!</p>
+      <Logo src={logo} alt="logo" width="320" height="315" />
+      <p>Hello Vite React App with Styled Tailwind!</p>
       <p>
         <Button type="button" onClick={() => setCount((count) => count + 1)}>
           Counter state is →
         </Button>
-        <Counter>{count}</Counter>
+        <Counter data-testid="counter">{count}</Counter>
       </p>
       <p>
         Edit <Code>App.tsx</Code> and save to test HMR updates.
@@ -76,7 +76,7 @@ const App: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          TailwindCSS Docs
+          Tailwind Docs
         </Link>
       </p>
     </Container>
