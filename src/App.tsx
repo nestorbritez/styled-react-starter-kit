@@ -1,85 +1,71 @@
+import './App.css'
+
+import reactLogo from '@assets/react.svg'
+import twLogo from '@assets/tailwindcss.svg'
 import { useState } from 'react'
 import tw from 'tailwind-styled-components'
 
-import logo from './images/favicon.svg'
+import viteLogo from '/vite.svg'
 
-const Container = tw.main`
-  max-w-lg h-screen
-  flex flex-col items-center justify-center space-y-5
-  m-auto
-  text-center
-`
+const Flex = tw.div`flex flex-col gap-6 items-center justify-center`
 
-const Logo = tw.img`
-  max-w-xs
-`
+const Wrapper = tw.section`m-auto max-w-lg text-center space-y-12`
+const Card = tw(Flex)``
+const Button = tw.button`bg-purple-600 py-2 px-4 rounded`
+const Code = tw.code`py-1 px-2 mx-2 bg-yellow-400 text-black rounded`
 
-const Button = tw.button`
-  bg-purple-600
-  py-2 px-4
-  rounded
-`
+const Title = tw.h1`text-5xl font-bold`
+const Logos = tw(Flex)`lg:flex-row`
+const Logo = tw.img`max-w-[150px] max-h-[150px]`
 
-const Counter = tw.span`
-  ml-5 p-3
-  bg-pink-600
-  rounded-full
-`
-
-const Code = tw.code`
-  py-1 px-2 mx-2
-  bg-yellow-400
-  text-black
-  rounded
-`
-
-const Link = tw.a`
-  border-b border-purple-400
-  mx-2
-`
-
-const App: React.FC = () => {
+function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Container>
-      <Logo src={logo} alt="logo" width="320" height="315" />
-      <p>Hello Vite React App with Styled Tailwind!</p>
-      <p>
-        <Button type="button" onClick={() => setCount((count) => count + 1)}>
-          Counter state is →
+    <Wrapper $as="section">
+      <Logos>
+        <Logo
+          src={viteLogo}
+          alt="logo"
+          width="320"
+          height="315"
+          className="animate-bounce"
+        />
+        <Logo
+          src={reactLogo}
+          alt="logo"
+          width="320"
+          height="315"
+          className="animate-spin"
+        />
+        <Logo
+          src={twLogo}
+          alt="logo"
+          width="220"
+          height="115"
+          className="animate-pulse"
+        />
+      </Logos>
+
+      <Card $as="article">
+        <Title>
+          Vite + React <Title $as="em">& Tailwind</Title>
+        </Title>
+      </Card>
+
+      <Card>
+        <Button onClick={() => setCount((count) => count + 1)}>
+          Button counter ({count})
         </Button>
-        <Counter data-testid="counter">{count}</Counter>
+        <p>
+          Edit <Code>src/App.tsx</Code>
+        </p>
+      </Card>
+
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
       </p>
-      <p>
-        Edit <Code>App.tsx</Code> and save to test HMR updates.
-      </p>
-      <p>
-        <Link
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </Link>
-        {' | '}
-        <Link
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </Link>{' '}
-        {' | '}
-        <Link
-          href="https://tailwindcss.com/docs"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tailwind Docs
-        </Link>
-      </p>
-    </Container>
+    </Wrapper>
   )
 }
 

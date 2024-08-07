@@ -1,14 +1,14 @@
-# React starter kit
-Use this boilerplate to start working with Vite, React and Tailwind as Styled Components.
+# Styled-React Starter Kit
+## React + TypeScript + Vite + Styled TailwindCSS
 
-This project includes:
- - Typescript
- - Vite
- - React
- - Jest
- - Eslint
- - Prettier.
+This opinionated template provides a minimal setup to get React and Tailwind working in Vite with HMR and some ESLint rules.
 
-## Used plugins
-- https://github.com/alloc/vite-react-jsx
-- https://github.com/aleclarson/vite-tsconfig-paths
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+In addition:
+
+- [tailwind-styled-components](https://github.com/MathiasGilson/tailwind-styled-component) to optimize the readability of JSX by creating atomic UI components
+- [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) to optimize the readability of imports

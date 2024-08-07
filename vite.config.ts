@@ -1,9 +1,17 @@
-import reactRefresh from '@vitejs/plugin-react-refresh'
+import react from '@vitejs/plugin-react-swc'
+import path from 'path'
 import { defineConfig } from 'vite'
-import reactJsx from 'vite-react-jsx'
-import tsconfigPaths from 'vite-tsconfig-paths'
 
-// https://vitejs.dev/config/
+const $r = (route: TemplateStringsArray) => path.resolve(__dirname, `/${route}`)
+
+/**
+ * @doc https://vitejs.dev/config/
+ */
 export default defineConfig({
-  plugins: [reactRefresh(), reactJsx(), tsconfigPaths()],
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@assets': $r`src/assets`,
+    },
+  },
 })
