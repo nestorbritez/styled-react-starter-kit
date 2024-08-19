@@ -7,16 +7,16 @@ import tw from 'tailwind-styled-components'
 
 import viteLogo from '/vite.svg'
 
-const Flex = tw.div`flex flex-col gap-6 items-center justify-center`
+const Flex = tw.div`flex flex-col items-center justify-center gap-6`
 
-const Wrapper = tw.section`m-auto max-w-lg text-center space-y-12`
+const Wrapper = tw.section`m-auto max-w-lg space-y-12 text-center`
 const Card = tw(Flex)``
-const Button = tw.button`bg-purple-600 py-2 px-4 rounded`
-const Code = tw.code`py-1 px-2 mx-2 bg-yellow-400 text-black rounded`
+const Button = tw.button`rounded bg-purple-600 px-4 py-2`
+const Code = tw.code`mx-2 rounded bg-yellow-400 px-2 py-1 text-black`
 
 const Title = tw.h1`text-5xl font-bold`
 const Logos = tw(Flex)`lg:flex-row`
-const Logo = tw.img`max-w-[150px] max-h-[150px]`
+const Logo = tw.img`max-h-[150px] max-w-[150px]`
 
 function App() {
   const [count, setCount] = useState(0)
@@ -62,9 +62,7 @@ function App() {
         </p>
       </Card>
 
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p>Click on the Vite and React logos to learn more</p>
     </Wrapper>
   )
 }
