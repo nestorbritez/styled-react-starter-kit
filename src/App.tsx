@@ -9,7 +9,7 @@ import viteLogo from '/vite.svg'
 
 const Flex = tw.div`flex flex-col items-center justify-center gap-6`
 
-const Wrapper = tw.section`m-auto max-w-lg space-y-12 text-center`
+const Main = tw.main`m-auto max-w-lg space-y-12 text-center`
 const Card = tw(Flex)``
 const Button = tw.button`rounded bg-purple-600 px-4 py-2`
 const Code = tw.code`mx-2 rounded bg-yellow-400 px-2 py-1 text-black`
@@ -22,7 +22,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Wrapper $as="section">
+    <Main>
       <Logos>
         <Logo
           src={viteLogo}
@@ -63,7 +63,7 @@ function App() {
       </Card>
 
       <p>Click on the Vite and React logos to learn more</p>
-    </Wrapper>
+    </Main>
   )
 }
 
